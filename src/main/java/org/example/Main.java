@@ -15,6 +15,8 @@ public class Main {
         System.out.println("zaz");
 
         System.out.println("23");
+
+        System.out.println("No");
         System.out.println("pasaran");
         // Press Shift+F10 or click the green arrow button in the gutter to run the code.
         for (int i = 1; i <= 5; i++) {

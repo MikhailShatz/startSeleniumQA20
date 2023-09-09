@@ -6,7 +6,7 @@ public class ExceptionPractice {
             pause();
             pause2();
         } catch (InterruptedException e) {
-            System.out.println("Caught InterruptedException: " + e.getMessage());
+            System.out.println("Caught Interrupted Exception: " + e.getMessage());
         } finally {
             System.out.println("Pause function execution completed.");
         }

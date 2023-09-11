@@ -1,56 +1,43 @@
 package sileniumour;
-
 public class ExceptionPractice {
-    public static void main(String[] args) {
-        try {
-            pause();
-            pause2();
-        } catch (InterruptedException e) {
-            System.out.println("Caught Interrupted Exception: " + e.getMessage());
-        } finally {
-            System.out.println("Pause function execution completed.");
-        }
+    public static void main(String[] args) throws InterruptedException, ArithmeticException {
 
-        try {
-           throwsEx();
-           tryCatchFinally();
-        } catch (Exception e) {
-            System.out.println("Caught InterruptedException: " + e.getMessage());
-        } finally {
-            System.out.println("Divide by zero functions execution completed.");
-        }
+        pause();
+        pause2();
+       // throwsEx(); // cant be used because division occurs before sout
+       tryCatchFinally();
     }
-   public static void pause() throws InterruptedException {
-       Thread.sleep(2000);
-   }
+    public static void pause() throws InterruptedException {
+        Thread.sleep(2000);
+    }
     public static void pause2()  {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }finally {
-            System.out.println("finally");
+            System.out.println("Method pause 2 was completed");
         }
     }
 
     public static void throwsEx() throws ArithmeticException{
-        int result = 9 / 0; // This will throw an ArithmeticException
+        int result = 9 / 0;
         System.out.println("Result: " + result);
     }
-    public static void tryCatchFinally(){
+    public static void tryCatchFinally() throws ArithmeticException{
         try {
-            int result = 9 / 0; // This will throw an ArithmeticException
+            int result = 9 / 0;
             System.out.println("Result: " + result);
-        }catch (Exception e){
+        }catch (ArithmeticException e){
             e.printStackTrace();
-            System.out.println(e.getMessage());
-            System.out.println(e.getLocalizedMessage());
-            System.out.println(e.getClass());
+            System.out.println("Arithmetic exception "+e.getMessage());
+
         }finally {
-            System.out.println("finally");
+            System.out.println("Method tryCatchFinally was completed");
         }
     }
 
 
 
 }
+

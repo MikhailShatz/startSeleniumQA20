@@ -50,14 +50,17 @@ public class SileniumCssIcarro {
 //        } catch (InterruptedException e) {
 //            throw new RuntimeException(e);
 
+        //}
+
         //xPath
+
 
         WebElement xpathLabel = driver.findElement(By.xpath("//label[@for='city']"));
         // //label[@for='city'].. jump to 1 tag up
         //label[@for='city']/span
         System.out.println(xpathLabel.getText());
 
-//        }
+
 
         driver.quit();
     }

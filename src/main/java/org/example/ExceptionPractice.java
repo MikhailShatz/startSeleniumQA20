@@ -1,4 +1,4 @@
-package sileniumour;
+package org.example;
 public class ExceptionPractice {
     public static void main(String[] args) throws InterruptedException, ArithmeticException {
 
